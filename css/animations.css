@@ -1,0 +1,205 @@
+.robot-eye-left {
+  animation-name: grow-and-shrink;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.robot-eye-right {
+  animation-name: snake-movement;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.robot-nose:hover {
+  transform: rotate(45deg);
+  transform: translate3d(42px, -62px);
+}
+
+.robot-ear-left {
+  animation-name: slide-out-fade;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.robot-ear-right {
+  animation-name: sweeping;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.robot-hair-three {
+  animation-name: moving-up;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.robot-hair-two {
+  animation-name: moving-down;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.robot-hair-one {
+  animation-name: moving-up;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.robot-tooth {
+  animation-name: animate-tooth;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sweeping {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-45deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(45deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+    filter: saturate(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-out-fade {
+  0% {
+    opacity: 1;
+    left: -20px;
+  }
+  100% {
+    opacity: 0;
+    left: -80px;
+  }
+}
+
+@keyframes moving-down {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 50%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes moving-up {
+  0% {
+    height: 100%;
+  }
+  25% {
+    height: 50%;
+  }
+  50% {
+    height: 0%;
+  }
+  75% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes animate-tooth {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes snake-movement {
+  0% {
+    width: 30px;
+    height: 30px;
+    top: 200px;
+    right: 200px;
+  }
+  12.5% {
+    width: 95px;
+    height: 30px;
+    top: 200px;
+    right: 100px;
+  }
+  25% {
+    width: 30px;
+    height: 30px;
+    top: 200px;
+    right: 100px;
+    background-color: blue;
+  }
+  37.5% {
+    width: 30px;
+    height: 95px;
+    top: 100px;
+    right: 100px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    right: 100px;
+    background-color: orange;
+  }
+  62.5% {
+    width: 95px;
+    height: 30px;
+    top: 100px;
+    right: 100px;
+  }
+  75% {
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    right: 200px;
+    background-color: yellow;
+  }
+  87.5% {
+    width: 30px;
+    height: 95px;
+    top: 100px;
+    right: 200px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    top: 200px;
+    right: 200px;
+    background-color: purple;
+  }
+}
